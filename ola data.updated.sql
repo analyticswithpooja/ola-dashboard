@@ -14,7 +14,6 @@ SELECT COUNT(*) FROM bookings WHERE Booking_Status = 'cancelled by Customer';
 SELECT Customer_ID, COUNT(Booking_ID) as total_rides FROM bookings GROUP BY
 Customer_ID ORDER BY total_rides DESC LIMIT 5;
 
-
 #5.	Get the number of rides cancelled by drivers due to personal and car-related issues:
  SELECT COUNT(*) FROM bookings WHERE cancelled_Rides_by_Driver = 'Personal & Car
 related issue';
@@ -25,8 +24,6 @@ SELECT MAX(Driver_Ratings) as max_rating, MIN(Driver_Ratings) as min_rating FROM
 #7.	Retrieve all rides where payment was made using UPI:
  SELECT * FROM bookings WHERE Payment_Method = 'UPI';
  
-    
-
 #8.	Find the average customer rating per vehicle type:
 SELECT Vehicle_Type, AVG(Customer_Rating) as avg_customer_rating FROM bookings
 GROUP BY Vehicle_Type;
